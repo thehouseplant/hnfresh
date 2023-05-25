@@ -1,11 +1,11 @@
-# fresh project
+# HN Fresh
 
-### Usage
+A Hacker News clone written using Fresh and Deno 
 
-Start the project:
+## Requirements
 
-```
-deno task start
-```
+- [Deno](https://deno.com/runtime) v1.25+
 
-This will watch the project directory and restart as necessary.
+## Geting Started
+
+Coming soon...
