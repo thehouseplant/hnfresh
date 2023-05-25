@@ -1,4 +1,4 @@
-import { type ItemRaw, Item, UserRaw, User } from "@/utils/types.ts";
+import { type ItemRaw, Item, UserRaw, User } from "../utils/types.ts";
 
 // Define the API base URL
 const API_BASE = "https://hacker-news.firebaseio.com/v0";
