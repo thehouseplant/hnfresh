@@ -61,7 +61,7 @@ async function fetchUser(id: string): Promise<User> {
   // Handle failed response
   if (!resp.ok) {
     const body = await resp.text();
-    throw new Error(`Error: ${resp.status} {body}`);
+    throw new Error(`Error: ${resp.status} ${body}`);
   }
 
   // Handle successful response
