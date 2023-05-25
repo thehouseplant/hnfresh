@@ -20,7 +20,7 @@ export default function Home(props: PageProps<Item[]>) {
       <Head>
         <title>HN Fresh</title>
       </Head>
-      <div class="bg-white w-full max-w-screen-lg py-2 px-10 flex flex-col">
+      <div class="bg-white w-full py-2 px-10 flex flex-col dark:(bg-gray-900 text-gray-300)">
         {items.map((item) => <ItemSummary item={item} />)}
       </div>
       <Footer />
