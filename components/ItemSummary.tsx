@@ -8,7 +8,7 @@ export function ItemSummary(props: ItemSummaryProps) {
   const { item } = props;
 
   return (
-    <div class="bg-white w-full max-w-screen-lg py-2 px-10 flex flex-col">
+    <div class="py-2">
       <div>
         <span>
           <a href={item.url}>{item.title}</a> ({item.url})
