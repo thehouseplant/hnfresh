@@ -31,7 +31,7 @@ async function fetchItem(id: number, withComments = false): Promise<Item> {
   }
 
   // Handle successful response
-  const item = await resp.text() as ItemRaw;
+  const item = await resp.json() as ItemRaw;
   item.kids = item.kids || [];
   return {
     id: item.id,
@@ -51,4 +51,30 @@ async function fetchItem(id: number, withComments = false): Promise<Item> {
 export async function getItem(id: number): Promise<Item> {
   const item = await fetchItem(id, true);
   return item;
+}
+
+// Define a function to fetch a single user
+async function fetchUser(id: string): Promise<User> {
+  // Fetch the response from the API
+  const resp = await fetch(`${API_BASE}/user/${id}.json`);
+
+  // Handle failed response
+  if (!resp.ok) {
+    const body = await resp.text();
+    throw new Error(`Error: ${resp.status} {body}`);
+  }
+
+  // Handle successful response
+  const user = await resp.json() as UserRaw;
+  return {
+    id: user.id,
+    created_at: user.created,
+    karma: user.karma
+  };
+}
+
+// Define a helper function to get a single user
+export async function getUser(id: string): Promise<User> {
+  const user = await fetchUser(id);
+  return user;
 }
