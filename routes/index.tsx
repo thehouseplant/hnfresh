@@ -7,7 +7,7 @@ import { getItems } from "../utils/data.ts";
 
 export const handler: Handlers<Item[]> = {
   async GET(_req, ctx) {
-    const items = await getItems();
+    const items = await getItems("top");
     return ctx.render(items);
   }
 };
