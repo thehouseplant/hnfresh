@@ -7,7 +7,7 @@ export default function Jobs() {
       <Head>
         <title>HN Fresh - Jobs</title>
       </Head>
-      <div class="bg-white w-full max-w-screen-lg py-2 px-10 flex flex-col">
+      <div class="bg-white w-full py-2 px-10 flex flex-col dark:(bg-gray-900 text-gray-300)">
         <h1>Jobs</h1>
       </div>
       <Footer />
