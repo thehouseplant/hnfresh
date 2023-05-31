@@ -12,7 +12,7 @@ export function ItemSummary(props: ItemSummaryProps) {
       <div>
         <span>
           <a
-            class={"text-gray-500 hover:text-gray-700 py-1 border-gray-500 dark:(text-gray-400 hover:text-gray-500)"} 
+            class="text-gray-500 hover:text-gray-700 py-1 border-gray-500 dark:(text-gray-400 hover:text-gray-500)" 
             href={item.url}>{item.title}
           </a> 
           {" "} ({item.url})
@@ -20,7 +20,10 @@ export function ItemSummary(props: ItemSummaryProps) {
       </div>
       <div>
         <span>
-          {item.points} point(s) by {item.user} | {item.time} | {item.comments_count} comment(s)
+          {item.points} point(s) by {" "}
+          <a class="text-gray-500 hover:text-gray-700 py-1 border-gray-500 dark:(text-gray-400 hover:text-gray-500)" href={`/user?id=${item.user}`}>
+            {item.user}
+          </a> | {item.time} | {item.comments_count} comment(s)
         </span>
       </div>
     </div>
