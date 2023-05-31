@@ -4,9 +4,9 @@ import { type ItemRaw, Item, UserRaw, User } from "../utils/types.ts";
 const API_BASE = "https://hacker-news.firebaseio.com/v0";
 
 // Define a function to fetch all top stories
-export async function getItems(): Promise<Item[]> {
+export async function getItems(type: string): Promise<Item[]> {
   // Fetch the response from the API
-  const resp = await fetch(`${API_BASE}/topstories.json`);
+  const resp = await fetch(`${API_BASE}/${type}stories.json`);
   
   // Handle failed response
   if (!resp.ok) {
