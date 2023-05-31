@@ -6,6 +6,12 @@ A Hacker News clone written using Fresh and Deno
 
 - [Deno](https://deno.com/runtime) v1.25+
 
-## Geting Started
+## Getting Started
 
-Coming soon...
+```bash
+# Clone the repository
+git clone git@github.com:thehouseplant/hnfresh
+
+# Start the task
+deno task start
+```
