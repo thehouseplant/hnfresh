@@ -1,8 +1,4 @@
-type Props = {
-  active: string;
-};
-
-export function Header({ active }: Props) {
+export function Header() {
   const menus = [
     { name: "Top", href: "/" },
     { name: "New", href: "/new" },
@@ -24,9 +20,7 @@ export function Header({ active }: Props) {
           <li>
             <a 
               href={menu.href} 
-              class={"text-gray-500 hover:text-gray-700 py-1 border-gray-500 dark:(text-gray-400 hover:text-gray-500)" + 
-              (menu.href === active ? " font-bold border-b-2" : "")}
-            >
+              class={"text-gray-500 hover:text-gray-700 py-1 border-gray-500 dark:(text-gray-400 hover:text-gray-500)"}>
               {menu.name}
             </a>
           </li>
